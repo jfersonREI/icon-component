@@ -3,5 +3,26 @@
  */
 
 :root {
-
+  --color-primary: #007bff;
+  --color-secondary: #6c757d;
+  --color-background: #ffffff;
+  --color-text-primary: #212529;
+  --color-text-secondary: #6c757d;
+  --typography-font-family-base: Roboto, sans-serif;
+  --typography-font-size-body: 16px;
+  --typography-font-size-heading: 24px;
+  --spacing-small: 8px;
+  --spacing-medium: 16px;
+  --spacing-large: 24px;
+  --border-width-thin: 1px;
+  --border-width-thick: 2px;
+  --border-radius-small: 4px;
+  --border-radius-medium: 8px;
+  --icon-size-small: 16px;
+  --icon-size-medium: 24px;
+  --icon-size-large: 32px;
+  --icon-size-xlarge: 48px;
+  --icon-color-default: #212529;
+  --icon-color-accent: #007bff;
+  --icon-color-secondary: #6c757d;
 }
