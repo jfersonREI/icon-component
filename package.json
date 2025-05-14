@@ -1,0 +1,44 @@
+{
+  "name": "icon-component",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "files": [
+    "dist",
+    "icons.sprite.svg"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-a11y": "^8.0.0",
+    "@storybook/addon-essentials": "^8.0.0",
+    "@storybook/addon-links": "^8.0.0",
+    "@storybook/blocks": "^8.0.0",
+    "@storybook/react": "^8.0.0",
+    "@storybook/react-vite": "^8.0.0",
+    "@testing-library/jest-dom": "^6.4.2",
+    "@testing-library/react": "^14.2.1",
+    "@vitejs/plugin-react": "^4.2.1",
+    "cpx": "^1.5.0",
+    "storybook": "^8.0.0",
+    "style-dictionary": "^4.4.0",
+    "svg-sprite": "^2.0.2",
+    "vite": "^5.2.0",
+    "vite-plugin-svgr": "^4.2.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && node scripts/generate-sprite.js && cpx public/icons.sprite.svg dist",
+    "preview": "vite preview",
+    "test": "vitest",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "build-tokens": "style-dictionary build --config style-dictionary.config.js"
+  }
+}

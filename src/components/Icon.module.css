@@ -1,0 +1,34 @@
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.svg {
+  width: 100%;
+  height: 100%;
+}
+.small {
+  width: var(--icon-size-small);
+  height: var(--icon-size-small);
+}
+.medium {
+  width: var(--icon-size-medium);
+  height: var(--icon-size-medium);
+}
+.large {
+  width: var(--icon-size-large);
+  height: var(--icon-size-large);
+}
+.xlarge {
+  width: var(--icon-size-xlarge);
+  height: var(--icon-size-xlarge);
+}
+.default {
+  fill: var(--icon-color-default);
+}
+.accent {
+  fill: var(--icon-color-accent);
+}
+.secondary {
+  fill: var(--icon-color-secondary);
+}

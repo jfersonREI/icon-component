@@ -1,0 +1,25 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-medium);
+  padding: var(--spacing-large);
+  background-color: var(--color-background);
+}
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: var(--spacing-medium);
+}
+.nav li {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-small);
+}
+.nav a {
+  color: var(--color-text-primary);
+  text-decoration: none;
+}
+.nav a:hover {
+  color: var(--color-primary);
+}

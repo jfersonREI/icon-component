@@ -1,0 +1,15 @@
+.button {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-small);
+  background-color: var(--color-primary);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-body);
+  padding: var(--spacing-medium);
+  border-radius: var(--border-radius-small);
+  border: var(--border-width-thin) solid var(--color-primary);
+  cursor: pointer;
+}
+.button:hover {
+  background-color: var(--color-secondary);
+}

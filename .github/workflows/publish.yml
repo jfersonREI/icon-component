@@ -1,0 +1,29 @@
+name: Publish Components
+on:
+  push:
+    branches: [main]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: npm install
+      - run: npm run build
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+
+# style-dictionary.config.js
+module.exports = {
+  source: ['src/tokens/tokens.json'],
+  platforms: {
+    css: {
+      transformGroup: 'css',
+      buildPath: 'src/',
+      files: [{
+        destination: 'index.css',
+        format: 'css/variables'
+      }]
+    }
+  }
+};
