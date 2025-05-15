@@ -9,7 +9,7 @@ const Icon = ({ name, size = "medium", color = "default", ...props }) => (
     {...props}
   >
     <svg className={styles.svg}>
-      <use href={`/icons.sprite.svg#icon-${name}`} />
+      <use href={`/icons.sprite.svg#${name}`} />
     </svg>
   </span>
 );

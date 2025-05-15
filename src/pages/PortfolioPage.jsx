@@ -6,8 +6,8 @@ const PortfolioPage = () => (
   <div>
     <NavigationBar
       items={[
-        { id: 1, label: "Home", url: "/", icon: "home" },
-        { id: 2, label: "Projects", url: "/projects", icon: "menu" },
+        { id: 1, label: "calendar", url: "/", icon: "calendar" },
+        { id: 2, label: "Projects", url: "/projects", icon: "bookmark" },
       ]}
     />
     <MediaCard
@@ -15,7 +15,7 @@ const PortfolioPage = () => (
       icon="twitter"
       description="Check out my latest work!"
     />
-    <PrimaryButton icon="add">View Project</PrimaryButton>
+    <PrimaryButton icon="account-box">View Project</PrimaryButton>
   </div>
 );
 
