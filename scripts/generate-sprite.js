@@ -73,7 +73,6 @@ svgFiles.forEach((filePath) => {
       console.error(`Invalid SVG content for ${filePath}:`, modifiedSvg);
       return;
     }
-    fs.writeFileSync(`debug-${id}.svg`, modifiedSvg);
     spriter.add(filePath, `icon-${id}.svg`, modifiedSvg);
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error);
@@ -95,12 +94,10 @@ spriter.compile((error, result) => {
   }
   try {
     let spriteContent = result.symbol.sprite.contents.toString();
-    fs.writeFileSync("debug-pre-sprite.svg", spriteContent);
-    // Post-process: fix IDs, remove fill="none", normalize whitespace
     spriteContent = spriteContent
       .replace(/id="icon-/g, 'id="')
       .replace(/fill="none"/g, "")
-      .replace(/<symbol\s+/g, "<symbol "); // Normalize <symbol  to <symbol
+      .replace(/<symbol\s+/g, "<symbol ");
     if (!spriteContent.includes("<symbol")) {
       console.error(
         "No symbols found in sprite after post-processing:",
@@ -108,7 +105,6 @@ spriter.compile((error, result) => {
       );
       process.exit(1);
     }
-    // Validate XML
     try {
       const dom = new JSDOM(spriteContent, { contentType: "image/svg+xml" });
       const svg = dom.window.document.querySelector("svg");
