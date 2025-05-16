@@ -4,6 +4,7 @@ import svgr from "vite-plugin-svgr";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "/icon-component/",
   plugins: [react(), svgr()],
   build: {
     outDir: "dist",
@@ -16,5 +17,4 @@ export default defineConfig({
       },
     },
   },
-  base: "/icon-component/",
 });
