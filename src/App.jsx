@@ -42,7 +42,7 @@ const App = () => {
 
   useEffect(() => {
     console.log("App rendered with icons:", icons);
-    fetch("${import.meta.env.BASE_URL}icons.sprite.svg")
+    fetch(".${import.meta.env.BASE_URL}icons.sprite.svg")
       .then((res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         return res.text();
